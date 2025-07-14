@@ -16,7 +16,7 @@ public class inicioDeSesionController {
      }
 
      @FXML
-     private void handleRegis(){
+     private void handleRegister(){
 
      }
 }

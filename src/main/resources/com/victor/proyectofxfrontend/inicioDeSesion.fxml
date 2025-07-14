@@ -16,7 +16,7 @@
     <PasswordField fx:id="passwordField" promptText="Contraseña"/>
 
     <Button text="Iniciar sesión" onAction="#handleLogin"/>
-    <Button text="Registrarse" onAction="#handleRegis"/>
+    <Button text="Registrarse" onAction="#handleRegister"/>
 
     <Label fx:id="errorLabel" textFill="red"/>
 
