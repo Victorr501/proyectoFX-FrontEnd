@@ -15,6 +15,9 @@ public class Usuario {
         this.activo = activo;
     }
 
+    public Usuario() {
+    }
+
     public Integer getId() {
         return id;
     }

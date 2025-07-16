@@ -1,5 +1,6 @@
 package com.victor.proyectofxfrontend.services;
 
+import com.victor.proyectofxfrontend.models.Login;
 import com.victor.proyectofxfrontend.models.Usuario;
 import java.net.URI;
 import java.net.URLEncoder;
@@ -43,5 +44,48 @@ public class UsuarioServices {
         }
     }
 
+    public String registrar(Usuario usuario) throws Exception{
+        try {
+            //Pasar el usuario a json
+            String json = gson.toJson(usuario);
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(BASE_URL+"/registrar"))
+                    .header("Content-Type", "application/json")
+                    .POST(HttpRequest.BodyPublishers.ofString(json))
+                    .build();
 
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+            if (response.statusCode() == 200){
+                return "Usuario registrado con éxito: ";
+            } else {
+                return "Error al registrar usuario: ";
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+            return "Excepción al registrar usuario: " + e.getMessage();
+        }
+    }
+
+    public String login(Login login) throws Exception{
+        try {
+            String json = gson.toJson(login);
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(BASE_URL+"/login"))
+                    .header("Content-Type", "application/json")
+                    .POST(HttpRequest.BodyPublishers.ofString(json))
+                    .build();
+
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+            if (response.statusCode() == 200){
+                return "Es correcto";
+            } else {
+                return "Error";
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+            return "Excepción al registrar usuario";
+        }
+    }
 }

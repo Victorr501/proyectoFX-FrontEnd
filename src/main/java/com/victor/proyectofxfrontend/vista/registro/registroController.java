@@ -1,5 +1,6 @@
 package com.victor.proyectofxfrontend.vista.registro;
 
+import com.victor.proyectofxfrontend.models.Usuario;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,7 +21,7 @@ public class registroController {
 
     @FXML
     private void registrarse(){
-
+        Usuario usuario = new Usuario();
 
         cerrarPestana();
     }
