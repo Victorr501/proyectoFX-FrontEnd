@@ -7,12 +7,12 @@
 <?import javafx.scene.layout.*?>
 
 <VBox spacing="10" alignment="CENTER" xmlns="https://javafx.com/javafx" xmlns:fx="https://javafx.com/fxml"
-    fx:controller="com.victor.proyectofxfrontend.vista.inicioDeSesion.inicioDeSesionController"
+    fx:controller="com.victor.proyectofxfrontend.vista.inicioDeSesion.InicioDeSesionController"
     prefWidth="300" prefHeight="200" style="-fx-padding: 20;">
 
     <Label text="Inicio de Sesión" style="-fx-font-size:20;"/>
 
-    <TextField fx:id="usernameField" promptText="Usuario"/>
+    <TextField fx:id="userCorreoField" promptText="Usuario"/>
     <PasswordField fx:id="passwordField" promptText="Contraseña"/>
 
     <Button text="Iniciar sesión" onAction="#handleLogin"/>

@@ -79,9 +79,11 @@ public class UsuarioServices {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
             if (response.statusCode() == 200){
-                return "Es correcto";
+                return response.body();
+            } else if (response.statusCode() == 401){
+                return response.body();
             } else {
-                return "Error";
+                return "Error en el login: " + response.statusCode() + " - " + response.body();
             }
         } catch (Exception e){
             e.printStackTrace();

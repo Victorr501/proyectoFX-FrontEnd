@@ -2,13 +2,14 @@ package com.victor.proyectofxfrontend.models;
 
 public class Login {
     private String correo;
-    private String contraseña;
+    private String contrasena;
 
-    public Login(String correo, String contraseña) {
+    public Login(String correo, String contrasena) {
         this.correo = correo;
-        this.contraseña = contraseña;
+        this.contrasena = contrasena;
     }
 
+    public Login(){}
     public String getCorreo() {
         return correo;
     }
@@ -17,11 +18,11 @@ public class Login {
         this.correo = correo;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 }

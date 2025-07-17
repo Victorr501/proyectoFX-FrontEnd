@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 
 <StackPane xmlns="https://javafx.com/javafx" xmlns:fx="https://javafx.com/fxml"
-           fx:controller="com.victor.proyectofxfrontend.vista.registro.registroController">
+           fx:controller="com.victor.proyectofxfrontend.vista.registro.RegistroController">
     <VBox spacing="10" alignment="CENTER" prefWidth="300" prefHeight="200" style="-fx-padding: 20;">
 
         <Label text="Crear cuenta" style="-fx-font-size:20;"/>

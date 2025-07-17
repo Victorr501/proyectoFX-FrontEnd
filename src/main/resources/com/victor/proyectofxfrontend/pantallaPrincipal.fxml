@@ -6,10 +6,22 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox spacing="10" alignment="CENTER" xmlns="https://javafx.com/javafx" xmlns:fx="https://javafx.com/fxml"
-      fx:controller="com.victor.proyectofxfrontend.vista.pantallaPrincipal.pantallaPrincipalController"
-      prefWidth="300" prefHeight="200" style="-fx-padding: 20;">
+<?import javafx.scene.image.ImageView?>
+<BorderPane xmlns="https://javafx.com/javafx" xmlns:fx="https://javafx.com/fxml"
+            fx:controller="com.victor.proyectofxfrontend.vista.pantallaPrincipal.PantallaPrincipalController"
+            prefWidth="1400" prefHeight="800" style="-fx-padding: 20;">
+
+    <left>
+        <VBox spacing="10" fx:id="sidebar">
+            <HBox onMouseClicked="#perfil">
+                <ImageView fx:id="userImage"/>
+                <Label fx:id="userNameLabel"/>
+            </HBox>
+        </VBox>
+    </left>
+    <center>
+
+    </center>
 
 
-
-</VBox>
+</BorderPane>
