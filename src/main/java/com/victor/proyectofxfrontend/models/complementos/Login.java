@@ -1,4 +1,4 @@
-package com.victor.proyectofxfrontend.models;
+package com.victor.proyectofxfrontend.models.complementos;
 
 public class Login {
     private String correo;

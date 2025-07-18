@@ -1,6 +1,6 @@
 package com.victor.proyectofxfrontend.vista.inicioDeSesion;
 
-import com.victor.proyectofxfrontend.models.Login;
+import com.victor.proyectofxfrontend.models.complementos.Login;
 import com.victor.proyectofxfrontend.services.UsuarioServices;
 import com.victor.proyectofxfrontend.utils.VerificarCorreo;
 import com.victor.proyectofxfrontend.vista.pantallaPrincipal.PantallaPrincipalController;

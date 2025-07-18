@@ -1,6 +1,6 @@
 package com.victor.proyectofxfrontend.services;
 
-import com.victor.proyectofxfrontend.models.Login;
+import com.victor.proyectofxfrontend.models.complementos.Login;
 import com.victor.proyectofxfrontend.models.Usuario;
 import java.net.URI;
 import java.net.URLEncoder;

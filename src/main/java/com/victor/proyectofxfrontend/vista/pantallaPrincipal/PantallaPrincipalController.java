@@ -9,8 +9,6 @@ import javafx.scene.image.ImageView;
 public class PantallaPrincipalController {
 
     @FXML
-    private ImageView userImage;
-    @FXML
     private Label userNameLabel;
 
 
@@ -27,6 +25,16 @@ public class PantallaPrincipalController {
 
     @FXML
     private void perfil(){
+
+    }
+
+    @FXML
+    private void mostarProyectos(){
+
+    }
+
+    @FXML
+    private void mostrarCrearProyecto(){
 
     }
 

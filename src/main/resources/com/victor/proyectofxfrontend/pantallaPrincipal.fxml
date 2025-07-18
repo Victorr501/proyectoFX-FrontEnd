@@ -14,13 +14,14 @@
     <left>
         <VBox spacing="10" fx:id="sidebar">
             <HBox onMouseClicked="#perfil">
-                <ImageView fx:id="userImage"/>
                 <Label fx:id="userNameLabel"/>
             </HBox>
+            <Button text="Proyectos" onAction="#mostarProyectos"/>
+            <Button text="Crear proyecto" onAction="#mostrarCrearProyecto"/>
         </VBox>
     </left>
     <center>
-
+        <AnchorPane fx:id="contenidoCentro"/>
     </center>
 
 
