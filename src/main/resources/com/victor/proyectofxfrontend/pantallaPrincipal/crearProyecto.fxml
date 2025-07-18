@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/javafx" xmlns="http://javafx.com/javafx"
+      fx:controller="com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.CrearProyectoController"
+      style="-fx-padding:20;">
+    <Label text="Crear nuevo proyecto" style="-fx-font-size: 18px;"/>
+
+    <Label text="Nombre"/>
+    <TextField fx:id="nombreCampo" promptText="Nombre del proyecto"/>
+
+    <Label text="Descripcion"/>
+    <TextArea fx:id="descripcionCampo" promptText="Descripción" prefRowCount="5"/>
+
+    <Label fx:id="labelError"/>
+
+    <Button text="Crear" onAction="#handleCrearProyecto"/>
+
+</VBox>
+

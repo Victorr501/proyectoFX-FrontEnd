@@ -21,7 +21,7 @@
         </VBox>
     </left>
     <center>
-        <AnchorPane fx:id="contenidoCentro"/>
+        <StackPane fx:id="contenidoCentro"/>
     </center>
 
 

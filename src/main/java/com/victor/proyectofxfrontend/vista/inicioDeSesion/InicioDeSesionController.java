@@ -79,7 +79,7 @@ public class InicioDeSesionController {
 
           Stage stage = new Stage();
           stage.setScene(new Scene(root));
-          stage.setTitle("Dashboard");
+          stage.setTitle("Pantalla principal");
           stage.show();
 
           Stage actual = (Stage) passwordField.getScene().getWindow();

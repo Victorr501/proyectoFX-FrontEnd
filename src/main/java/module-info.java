@@ -7,6 +7,7 @@ module com.victor.proyectofxfrontend {
 
     opens com.victor.proyectofxfrontend.models to com.google.gson;
     opens com.victor.proyectofxfrontend.vista.pantallaPrincipal to javafx.fxml;
+    opens com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico to javafx.fxml;
     opens com.victor.proyectofxfrontend.vista.inicioDeSesion to javafx.fxml;
     opens com.victor.proyectofxfrontend.vista.registro to javafx.fxml;
     exports com.victor.proyectofxfrontend;
