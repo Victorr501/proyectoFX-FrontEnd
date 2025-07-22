@@ -28,6 +28,7 @@ public class PantallaPrincipalController {
     public void setUsuario(String correo){
         try {
             usuario = usuarioServices.getUsuario(correo);
+            userNameLabel.setText(usuario.getNombre());
         } catch (Exception e) {
             System.err.println("Error al cargar los datos");
         }

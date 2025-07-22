@@ -6,10 +6,10 @@ public class Proyecto {
     private Integer id;
     private String nombre;
     private String descripcion;
-    private LocalDate fechaCreacion;
+    private String fechaCreacion;
     private Integer idUsuario;
 
-    public Proyecto(Integer id, String nombre, String descripcion, LocalDate fechaCreacion, Integer idUsuario) {
+    public Proyecto(Integer id, String nombre, String descripcion, String fechaCreacion, Integer idUsuario) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -44,11 +44,11 @@ public class Proyecto {
         this.descripcion = descripcion;
     }
 
-    public LocalDate getFechaCreacion() {
+    public String getFechaCreacion() {
         return fechaCreacion;
     }
 
-    public void setFechaCreacion(LocalDate fechaCreacion) {
+    public void setFechaCreacion(String fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
 
@@ -58,5 +58,16 @@ public class Proyecto {
 
     public void setIdUsuario(Integer idUsuario) {
         this.idUsuario = idUsuario;
+    }
+
+    @Override
+    public String toString() {
+        return "Proyecto{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", fechaCreacion='" + fechaCreacion + '\'' +
+                ", idUsuario=" + idUsuario +
+                '}';
     }
 }
