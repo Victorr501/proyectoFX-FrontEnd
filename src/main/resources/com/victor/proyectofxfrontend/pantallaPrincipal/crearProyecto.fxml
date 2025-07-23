@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 
 <VBox spacing="10" xmlns:fx="http://javafx.com/javafx" xmlns="http://javafx.com/javafx"
-      fx:controller="com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.CrearProyectoController"
+      fx:controller="com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.crearProyecto.CrearProyectoController"
       style="-fx-padding:20;">
     <Label text="Crear nuevo proyecto" style="-fx-font-size: 18px;"/>
 

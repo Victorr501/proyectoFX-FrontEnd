@@ -8,7 +8,7 @@
 
 <ScrollPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/javafx"
-            fx:controller="com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.ListaProyectosController"
+            fx:controller="com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.listaProyecto.ListaProyectosController"
             fitToWidth="true">
 
     <FlowPane fx:id="contenedorProyectos"

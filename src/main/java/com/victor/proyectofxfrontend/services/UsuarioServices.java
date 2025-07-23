@@ -17,7 +17,7 @@ public class UsuarioServices {
     private final Gson gson = new Gson();
 
     //Conseguir el usuairo por el corro, para el inicio de sesion
-    public Usuario getUsuario(String correo) throws Exception{
+    public Usuario getUsuarioPorCorreo(String correo) throws Exception{
         String encodedEmail = URLEncoder.encode(correo, StandardCharsets.UTF_8);
         URI uri = URI.create(BASE_URL + "/correo/" + encodedEmail);
 
@@ -88,6 +88,46 @@ public class UsuarioServices {
         } catch (Exception e){
             e.printStackTrace();
             return "Excepción al registrar usuario";
+        }
+    }
+
+    public Usuario getUsuario(Integer id) throws Exception{
+        URI uri = new URI(BASE_URL+"/"+id);
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(uri)
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        int status = response.statusCode();
+        String body = response.body();
+
+        if (status == 200){
+            return gson.fromJson(body, Usuario.class);
+        } else if(status == 404){
+            System.out.println("Usuario no encotroado con el id: " + id);
+            return null;
+        } else {
+            throw new RuntimeException("Error al buscar usuario (" + status +"): " +body);
+        }
+    }
+
+    public String eliminarUsuario(Integer id) throws Exception{
+        URI uri = URI.create(BASE_URL + "/" + id);
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(uri)
+                .DELETE()
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        if (response.statusCode() >= 200 && response.statusCode() < 300){
+            return response.body();
+        }else {
+            throw new RuntimeException("Error al eliminar el usuario. Codigo: " + response.statusCode() +
+                    " - Cuerpo: " + response.body());
         }
     }
 }

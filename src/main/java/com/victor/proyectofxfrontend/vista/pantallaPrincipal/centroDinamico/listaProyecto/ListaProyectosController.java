@@ -1,16 +1,13 @@
-package com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico;
+package com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.listaProyecto;
 
 import com.victor.proyectofxfrontend.models.Proyecto;
 import com.victor.proyectofxfrontend.services.ProyectoServices;
-import com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.listaProyecto.ProyectoItemController;
+import com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.listaProyecto.items.ProyectoItemController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ListaProyectosController {

@@ -2,13 +2,13 @@ package com.victor.proyectofxfrontend.vista.pantallaPrincipal;
 
 import com.victor.proyectofxfrontend.models.Usuario;
 import com.victor.proyectofxfrontend.services.UsuarioServices;
-import com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.CrearProyectoController;
-import com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.ListaProyectosController;
+import com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.crearProyecto.CrearProyectoController;
+import com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.listaProyecto.ListaProyectosController;
+import com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.perfil.PerfilControler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 
 import java.io.IOException;
@@ -27,7 +27,7 @@ public class PantallaPrincipalController {
 
     public void setUsuario(String correo){
         try {
-            usuario = usuarioServices.getUsuario(correo);
+            usuario = usuarioServices.getUsuarioPorCorreo(correo);
             userNameLabel.setText(usuario.getNombre());
         } catch (Exception e) {
             System.err.println("Error al cargar los datos");
@@ -36,7 +36,18 @@ public class PantallaPrincipalController {
 
     @FXML
     private void perfil(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/victor/proyectofxfrontend/pantallaPrincipal/perfil.fxml"));
+            Parent vistaCrear = loader.load();
 
+            PerfilControler pc = loader.getController();
+            pc.getId(usuario.getId());
+
+            contenidoCentro.getChildren().setAll(vistaCrear);
+        } catch (Exception e){
+            System.err.println("Error al cargar los datos");
+            e.printStackTrace();
+        }
     }
 
     @FXML

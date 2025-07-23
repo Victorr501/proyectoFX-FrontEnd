@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/javafx" xmlns="http://javafx.com/javafx"
+      fx:controller="com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.perfil.PerfilControler"
+      prefHeight="400" prefWidth="600">
+
+    <VBox alignment="TOP_CENTER" spacing="20" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0">
+
+        <Label text="Perfil de usuario" style="-fx-font-size:20px; -fx-font-weight: bold;"/>
+
+        <VBox spacing="10" alignment="CENTER" maxWidth="400">
+            <HBox spacing="10">
+                <Label text="Nombre de usaurio:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="usernameLabel"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Email:" style="-fx-font-weight:bold"/>
+                <Label fx:id="emailLabel"/>
+            </HBox>
+        </VBox>
+
+        <HBox spacing="20" alignment="CENTER">
+            <Button text="Editar usuario" onAction="#editarUsuario"/>
+            <Button text="Cabiar contraseña" onAction="#cabniarContraseña"/>
+            <Button text="Eliminar cuenta" style="-fx-background-color: #ff4d4d; -fx-text-fill: white;" onAction="#eliminarCuenta"/>
+        </HBox>
+    </VBox>
+
+</AnchorPane>

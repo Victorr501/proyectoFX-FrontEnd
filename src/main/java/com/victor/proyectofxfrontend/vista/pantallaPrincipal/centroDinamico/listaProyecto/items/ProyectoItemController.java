@@ -1,4 +1,4 @@
-package com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.listaProyecto;
+package com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.listaProyecto.items;
 
 import com.victor.proyectofxfrontend.models.Proyecto;
 import com.victor.proyectofxfrontend.services.ProyectoServices;

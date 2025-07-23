@@ -1,4 +1,4 @@
-package com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico;
+package com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.crearProyecto;
 
 import com.victor.proyectofxfrontend.models.Proyecto;
 import com.victor.proyectofxfrontend.services.ProyectoServices;
