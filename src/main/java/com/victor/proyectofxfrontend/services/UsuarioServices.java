@@ -1,5 +1,6 @@
 package com.victor.proyectofxfrontend.services;
 
+import com.victor.proyectofxfrontend.models.complementos.CambiarContraseña;
 import com.victor.proyectofxfrontend.models.complementos.Login;
 import com.victor.proyectofxfrontend.models.Usuario;
 import java.net.URI;
@@ -145,5 +146,25 @@ public class UsuarioServices {
         HttpResponse<String> respuesta = client.send(request, HttpResponse.BodyHandlers.ofString());
 
         return respuesta.statusCode() == 200 ? respuesta.body() : "Error al actualizar usuario " + respuesta.body();
+    }
+
+    public String actualizarUsuarioContraseña(CambiarContraseña cC) throws Exception{
+        URI uri = URI.create(BASE_URL+ "/cambiar-password");
+
+        String json = gson.toJson(cC);
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(uri)
+                .header("Content-Type", "application/json")
+                .PUT(HttpRequest.BodyPublishers.ofString(json))
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        if (response.statusCode() == 200){
+            return response.body();
+        } else  {
+            return "Error: " + response.body();
+        }
     }
 }

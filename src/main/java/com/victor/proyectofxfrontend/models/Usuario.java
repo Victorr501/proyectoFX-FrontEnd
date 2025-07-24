@@ -15,6 +15,17 @@ public class Usuario {
         this.activo = activo;
     }
 
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", correo='" + correo + '\'' +
+                ", passwordHaseada='" + passwordHaseada + '\'' +
+                ", activo=" + activo +
+                '}';
+    }
+
     public Usuario() {
     }
 

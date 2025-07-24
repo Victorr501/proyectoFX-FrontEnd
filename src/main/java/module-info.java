@@ -17,6 +17,7 @@ module com.victor.proyectofxfrontend {
     opens com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.perfil.confirmarEliminar to javafx.fxml;
     opens com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.perfil.moficiarPerfil to javafx.fxml;
     opens com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.perfil.actualizarContrasena to javafx.fxml;
+    opens com.victor.proyectofxfrontend.vista.proyecto to javafx.fxml;
 
     exports com.victor.proyectofxfrontend;
 }

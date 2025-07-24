@@ -28,6 +28,7 @@
             <Label text="Repetir nueva contraseña: "/>
             <PasswordField fx:id="repetirPassword" promptText="Repete la nueva contraseña"/>
         </VBox>
+        <Label fx:id="errorLabel"/>
 
         <HBox spacing="20" alignment="CENTER">
             <Button text="Actualizar" onAction="#actualizar"/>

@@ -2,8 +2,14 @@ package com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.lis
 
 import com.victor.proyectofxfrontend.models.Proyecto;
 import com.victor.proyectofxfrontend.services.ProyectoServices;
+import com.victor.proyectofxfrontend.vista.proyecto.ProyectoPrincipalController;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 import java.time.format.DateTimeFormatter;
 
@@ -40,7 +46,18 @@ public class ProyectoItemController {
 
 
     @FXML
-    private void handleClick(){
+    private void handleClick() throws Exception{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/victor/proyectofxfrontend/pantallaPrincipal/proyectoPantallaPrincipal/proyecctoPantallaPrincipal.fxml"));
+        Parent root = loader.load();
+
+        ProyectoPrincipalController pPC = loader.getController();
+        pPC.setId(id);
+
+        Stage nuevaVentana = (Stage) nombreLabel.getScene().getWindow();
+        nuevaVentana.setTitle("Proyecto");
+        nuevaVentana.setScene(new Scene(root));
+        nuevaVentana.show();
+
 
     }
 }

@@ -1,7 +1,7 @@
 package com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.perfil.actualizarContrasena;
 
 import com.victor.proyectofxfrontend.models.Usuario;
-import com.victor.proyectofxfrontend.models.complementos.Login;
+import com.victor.proyectofxfrontend.models.complementos.CambiarContraseña;
 import com.victor.proyectofxfrontend.services.UsuarioServices;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -34,17 +34,19 @@ public class ActualizarContrasenaController {
         String newPassword = nuevaPassword.getText();
         String repitPassword = repetirPassword.getText();
 
-        Login login = new Login(correo, passwordAntigua);
+        CambiarContraseña cC = new CambiarContraseña();
 
+        if (newPassword.length() >= 6 && newPassword.equals(repitPassword)){
+            cC.setCorreo(correo);
+            cC.setActualPassword(passwordAntigua);
+            cC.setNuevaPassword(newPassword);
 
+            String resultado = uS.actualizarUsuarioContraseña(cC);
+            System.out.println(resultado);
 
-        if (uS.login(login).equals("Login correcto")){
-            if (newPassword.length() >= 6){
-                if (newPassword.equals(repitPassword)){
+            cancelar();
+        } else errorLabel.setText("La nueva contraseña es muy corta y o no coincide con las contraseñas");
 
-                } else errorLabel.setText("Las contraseñas no coinciden");
-            } else errorLabel.setText("La nueva contraseña es muy corta");
-        } else errorLabel.setText("La contraseña no es correcta");
 
     }
 

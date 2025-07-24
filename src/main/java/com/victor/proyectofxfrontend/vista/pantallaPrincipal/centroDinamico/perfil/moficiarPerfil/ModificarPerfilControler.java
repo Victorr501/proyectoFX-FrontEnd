@@ -39,7 +39,7 @@ public class ModificarPerfilControler {
         }
 
 
-
+        System.out.println(usuario1.toString());
         System.out.println(us.actualizarUsuario(usuario1));
         cancelar();
     }
