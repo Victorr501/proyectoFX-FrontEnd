@@ -2,14 +2,16 @@ package com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.per
 
 import com.victor.proyectofxfrontend.models.Usuario;
 import com.victor.proyectofxfrontend.services.UsuarioServices;
-import com.victor.proyectofxfrontend.utils.VerificarCorreo;
+import com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.perfil.actualizarContrasena.ActualizarContrasenaController;
 import com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.perfil.confirmarEliminar.ConfirmarEliminarController;
+import com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.perfil.moficiarPerfil.ModificarPerfilControler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -22,13 +24,35 @@ public class PerfilControler {
     private Label emailLabel;
 
     @FXML
-    private void editarUsuario(){
+    private void editarUsuario() throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/victor/proyectofxfrontend/pantallaPrincipal/modificarPerfil/modificarPerfil.fxml"));
+        AnchorPane root = loader.load();
 
+            ModificarPerfilControler mPC = loader.getController();
+        mPC.setId(usuario.getId());
+
+        Stage stage = new Stage();
+        stage.setTitle("Modificar usuario");
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+        stage.show();
     }
 
     @FXML
-    private void cabniarContraseña(){
+    private void cambiarContrasena() throws Exception{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/victor/proyectofxfrontend/pantallaPrincipal/actualizarContraseña/actualizarContraseña.fxml"));
+        AnchorPane root = loader.load();
 
+        ActualizarContrasenaController aCC = loader.getController();
+        aCC.setId(id);
+
+        Stage stage = new Stage();
+        stage.setTitle("Actualizar contraseña");
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+        stage.show();
     }
 
     @FXML
@@ -53,6 +77,7 @@ public class PerfilControler {
 
         Stage stage = new Stage();
         stage.setTitle("Confirmar eliminación");
+        stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(new Scene(root));
         stage.setResizable(false);
         stage.show();

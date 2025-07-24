@@ -27,7 +27,7 @@
 
         <HBox spacing="20" alignment="CENTER">
             <Button text="Editar usuario" onAction="#editarUsuario"/>
-            <Button text="Cabiar contraseña" onAction="#cabniarContraseña"/>
+            <Button text="Cabiar contraseña" onAction="#cambiarContrasena"/>
             <Button text="Eliminar cuenta" style="-fx-background-color: #ff4d4d; -fx-text-fill: white;" onAction="#eliminarCuenta"/>
         </HBox>
     </VBox>

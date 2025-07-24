@@ -130,4 +130,20 @@ public class UsuarioServices {
                     " - Cuerpo: " + response.body());
         }
     }
+
+    public String actualizarUsuario(Usuario usuario)throws Exception{
+        URI uri = URI.create(BASE_URL + "/" + usuario.getId());
+
+        String json = gson.toJson(usuario);
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(uri)
+                .header("Content-Type", "application/json")
+                .POST(HttpRequest.BodyPublishers.ofString(json, StandardCharsets.UTF_8))
+                .build();
+
+        HttpResponse<String> respuesta = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        return respuesta.statusCode() == 200 ? respuesta.body() : "Error al actualizar usuario " + respuesta.body();
+    }
 }
