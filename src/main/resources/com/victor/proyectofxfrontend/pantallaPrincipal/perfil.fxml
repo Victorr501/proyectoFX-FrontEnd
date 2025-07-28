@@ -6,9 +6,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import java.net.URL?>
 <AnchorPane xmlns:fx="http://javafx.com/javafx" xmlns="http://javafx.com/javafx"
-      fx:controller="com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.perfil.PerfilControler"
-      prefHeight="400" prefWidth="600">
+            fx:controller="com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.perfil.PerfilControler"
+            prefHeight="400" prefWidth="600" stylesheets="">
+
+
 
     <VBox alignment="TOP_CENTER" spacing="20" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0">
 

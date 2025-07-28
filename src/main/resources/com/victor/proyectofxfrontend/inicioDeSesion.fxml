@@ -6,9 +6,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import java.net.URL?>
 <VBox spacing="10" alignment="CENTER" xmlns="https://javafx.com/javafx" xmlns:fx="https://javafx.com/fxml"
-    fx:controller="com.victor.proyectofxfrontend.vista.inicioDeSesion.InicioDeSesionController"
-    prefWidth="300" prefHeight="200" style="-fx-padding: 20;">
+      fx:controller="com.victor.proyectofxfrontend.vista.inicioDeSesion.InicioDeSesionController"
+      prefWidth="300" prefHeight="200" style="-fx-padding: 20;" stylesheets="@estiloInicioSesion.css">
+
 
     <Label text="Inicio de Sesión" style="-fx-font-size:20;"/>
 
