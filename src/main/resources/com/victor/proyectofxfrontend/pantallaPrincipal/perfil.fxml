@@ -9,7 +9,7 @@
 <?import java.net.URL?>
 <AnchorPane xmlns:fx="http://javafx.com/javafx" xmlns="http://javafx.com/javafx"
             fx:controller="com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.perfil.PerfilControler"
-            prefHeight="400" prefWidth="600" stylesheets="">
+            prefHeight="400" prefWidth="600" stylesheets="@estiloPerfil.css">
 
 
 
@@ -31,7 +31,7 @@
         <HBox spacing="20" alignment="CENTER">
             <Button text="Editar usuario" onAction="#editarUsuario"/>
             <Button text="Cabiar contraseña" onAction="#cambiarContrasena"/>
-            <Button text="Eliminar cuenta" style="-fx-background-color: #ff4d4d; -fx-text-fill: white;" onAction="#eliminarCuenta"/>
+            <Button text="Eliminar cuenta" onAction="#eliminarCuenta" styleClass="confirmar"/>
         </HBox>
     </VBox>
 

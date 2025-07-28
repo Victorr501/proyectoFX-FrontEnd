@@ -26,6 +26,11 @@ public class ModificarPerfilControler {
         String nombre = nombreField.getText();
         String correo = correoField.getText();
 
+        if ((nombre == null || nombre.isEmpty()) && (correo == null || correo.isEmpty())){
+            errorLabel.setText("Rellena al menos un campo");
+            return;
+        }
+
         Usuario usuario1 = new Usuario();
         usuario1.setId(usuario.getId());
         usuario1.setNombre(nombre);
@@ -38,9 +43,7 @@ public class ModificarPerfilControler {
             }
         }
 
-
-        System.out.println(usuario1.toString());
-        System.out.println(us.actualizarUsuario(usuario1));
+        errorLabel.setText(us.actualizarUsuario(usuario1));
         cancelar();
     }
 

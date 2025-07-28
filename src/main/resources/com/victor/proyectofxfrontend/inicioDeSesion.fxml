@@ -12,7 +12,7 @@
       prefWidth="300" prefHeight="200" style="-fx-padding: 20;" stylesheets="@estiloInicioSesion.css">
 
 
-    <Label text="Inicio de Sesión" style="-fx-font-size:20;"/>
+    <Label text="Inicio de Sesión" style="-fx-font-size:20;" fx:id="Titulo"/>
 
     <TextField fx:id="userCorreoField" promptText="Usuario"/>
     <PasswordField fx:id="passwordField" promptText="Contraseña"/>
@@ -20,7 +20,7 @@
     <Button text="Iniciar sesión" onAction="#handleLogin"/>
     <Button text="Registrarse" onAction="#handleRegister"/>
 
-    <Label fx:id="errorLabel" textFill="red"/>
+    <Label fx:id="errorLabel" textFill="red" styleClass="error"/>
 
 </VBox>
 
