@@ -68,10 +68,7 @@ public class ProyectoServices {
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        if (response.statusCode() == 200){
-            return response.body();
-        } else {
-            return response.body();
-        }
+        return response.body();
+
     }
 }

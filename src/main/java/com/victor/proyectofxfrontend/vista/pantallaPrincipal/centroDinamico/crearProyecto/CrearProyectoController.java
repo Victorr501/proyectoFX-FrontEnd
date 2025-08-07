@@ -1,6 +1,8 @@
 package com.victor.proyectofxfrontend.vista.pantallaPrincipal.centroDinamico.crearProyecto;
 
+import com.victor.proyectofxfrontend.models.Documento;
 import com.victor.proyectofxfrontend.models.Proyecto;
+import com.victor.proyectofxfrontend.services.DocumentoServices;
 import com.victor.proyectofxfrontend.services.ProyectoServices;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -13,7 +15,9 @@ public class CrearProyectoController {
     //id de usuario
     private Integer id;
 
-    private ProyectoServices ps = new ProyectoServices();
+    private final ProyectoServices ps = new ProyectoServices();
+
+    private final DocumentoServices dS = new DocumentoServices();
 
     public void setId(Integer id){
         this.id = id;
@@ -29,7 +33,7 @@ public class CrearProyectoController {
     private TextArea descripcionCampo;
 
     @FXML
-    private void handleCrearProyecto(){
+    private void handleCrearProyecto() throws Exception {
         String nombre = nombreCampo.getText().trim();
         String descripcion = descripcionCampo.getText().trim();
 
@@ -53,6 +57,18 @@ public class CrearProyectoController {
             labelError.setText(respuesta);
             nombreCampo.clear();
             descripcionCampo.clear();
+        } catch (Exception e){
+            labelError.setText("Error al crear el proyecto: " + e.getMessage());
+            System.out.println(e.getMessage());
+        }
+
+        Integer idProyecto =
+        Documento d = new Documento();
+        d.setTitulo(nombre);
+
+        try {
+            String respuesta = dS.
+            labelError.setText();
         } catch (Exception e){
             labelError.setText("Error al crear el proyecto: " + e.getMessage());
             System.out.println(e.getMessage());
