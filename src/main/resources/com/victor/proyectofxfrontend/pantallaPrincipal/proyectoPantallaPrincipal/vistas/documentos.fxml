@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import org.fxmisc.richtext.InlineCssTextArea?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.victor.proyectofxfrontend.vista.proyecto.vistas.DocumentosController"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding:10;">
+            <Button text="Guardar" onAction="#guardarDocumento"/>
+            <Button text="Negrita" onAction="#aplicarNegrita"/>
+            <Button text="Cursiva" onAction="#aplicarCursiva"/>
+            <Button text="Subrayado" onAction="#aplicarSubrayado"/>
+        </HBox>
+    </top>
+    <center>
+        <InlineCssTextArea fx:id="editorTexto"
+                           wrapText="true"
+                           style="-fx-padding: 10; -fx-font-size: 14px;"
+                           prefWidth="900" prefHeight="600"/>
+    </center>
+</BorderPane>

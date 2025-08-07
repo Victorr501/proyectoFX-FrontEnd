@@ -16,9 +16,14 @@
             <Label fx:id="usernameLabel" text="Usuario"/>
 
             <HBox alignment="CENTER" spacing="10">
-                <Button onAction=""/>
+                <Button text="Documento" onAction="#mostrarVista1"/>
+                <Button text="Tareas" onAction="#mostrarVista2"/>
+                <Button text="Calendario" onAction="#mostrarVista3"/>
             </HBox>
     </top>
+    <center>
+        <StackPane fx:id="panelCentral"/>
+    </center>
 
 
 </BorderPane>

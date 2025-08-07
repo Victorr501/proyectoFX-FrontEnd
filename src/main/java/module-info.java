@@ -4,6 +4,7 @@ module com.victor.proyectofxfrontend {
     requires java.net.http;
     requires com.google.gson;
     requires jakarta.mail;
+    requires org.fxmisc.richtext;
 
     opens com.victor.proyectofxfrontend.models to com.google.gson;
     opens com.victor.proyectofxfrontend.vista.pantallaPrincipal to javafx.fxml;
